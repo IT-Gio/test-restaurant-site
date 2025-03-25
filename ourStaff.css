@@ -1,0 +1,228 @@
+.chefs{
+    background-color: lavender;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.chefTittle{
+    font-size: 54px;
+    font-weight: bold;
+    color: rgb(35, 0, 100);
+    text-align: center;
+    padding: 20px;
+}
+
+.chefs-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.chef-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.chef-container:hover {
+    transform: scale(1.1); /* Enlarges the full card (image + text) */
+}
+
+.chef-card {
+    width: 350px;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.chef-info {
+    width: 350px;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+}
+.chef-info h2{
+    font-size: 24px;
+    margin-bottom:15px;
+}
+
+.chef1 { background-image: url('./images/chef1.png'); }
+.chef2 { background-image: url('./images/chef2.png'); }
+.chef3 { background-image: url('./images/chef3.png'); }
+.chef4 { background-image: url('./images/chef4.png'); }
+
+@media (max-width: 600px) {
+    .chef-info {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+/* story */
+.ourStory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+    background-color: lavender; /* Soft lavender background */
+}
+
+/* Card Styling */
+.story-card {
+    max-width: 600px;
+    background: linear-gradient(135deg, #6a5acd, #836fff); /* Blue-Purple Gradient */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white; /* Light text for contrast */
+}
+
+/* Special Section for Founder (Without a Card) */
+.founder-text {
+    max-width: 600px;
+    text-align: center;
+    font-size: 25px !important;
+    line-height: 1.6;
+    font-style: italic;
+    padding: 0 20px;
+}
+.founder-text p, .founder-text h2 {
+    color: #3a2f8a !important;
+}
+
+
+/* Divider Line */
+.divider {
+    width: 80px;
+    height: 3px;
+    background-color: #483d8b; /* Darker blue-purple accent */
+    margin: 10px auto;
+}
+
+/* Heading Styling */
+.story-card h2, .founder-text h2 {
+    color: #ffffff; /* Light pastel lavender */
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* Paragraph Styling */
+.story-card p, .founder-text p {
+    font-size: 20px;
+    color: #f3efff; /* Soft white-lavender for readability */
+}
+
+.sepLine{
+    width: 40%;
+    height: 2px;
+    background-color: #1c1356;
+    border-radius: 20px;
+}
+/* Responsive styling for chefs section */
+
+/* For screens smaller than 1024px (Tablets and below) */
+@media (max-width: 1024px) {
+    .chefTittle {
+        font-size: 40px; /* Smaller title size */
+    }
+
+    .chefs-container {
+        gap: 30px; /* Reduced gap between chef cards */
+        padding: 20px;
+    }
+
+    .chef-card {
+        width: 300px; /* Reduce card size */
+        height: 400px;
+    }
+
+    .chef-info {
+        width: 300px; /* Adjust chef info size */
+    }
+
+    .chef-info h2 {
+        font-size: 20px; /* Smaller font size for the name */
+    }
+}
+
+/* For screens smaller than 768px (Mobile devices) */
+@media (max-width: 768px) {
+    .chefTittle {
+        font-size: 32px; /* Further reduce title size */
+    }
+
+    .chefs-container {
+        gap: 20px; /* Smaller gap between cards */
+        padding: 10px;
+    }
+
+    .chef-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .chef-card {
+        width: 280px; /* Reduce card width for smaller screens */
+        height: 350px;
+    }
+
+    .chef-info {
+        width: 280px; /* Adjust chef info size */
+    }
+
+    .chef-info h2 {
+        font-size: 18px; /* Smaller name font size */
+    }
+}
+
+/* For screens smaller than 600px (Very small mobile devices) */
+@media (max-width: 600px) {
+    .chefTittle {
+        font-size: 28px; /* Further reduce title size */
+    }
+
+    .chefs-container {
+        gap: 15px; /* Tighten the gap between cards */
+        padding: 10px;
+    }
+
+    .chef-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .chef-card {
+        width: 250px; /* Even smaller card size */
+        height: 320px;
+    }
+
+    .chef-info {
+        width: 250px; 
+        height: 150px;/* Adjust chef info size */
+    }
+
+    .chef-info h2 {
+        font-size: 16px; /* Smaller name font size */
+    }
+
+    .chef-info p {
+        font-size: 12px; /* Smaller paragraph text */
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ourStaff.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#" class="selectedSideBar">About</a></li>
+            <li><a href="./job.html">hirings</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <nav class="navbar">
+        <button class="rental-button" id="logoB">
+            <div class="logo"></div>
+        </button>
+        <button class="ourStaff" id="ourStaff">
+            <div class="logo2"></div>
+            <p class="hiddenTxt">our Staff</p>
+        </button>
+    
+        <span class="respTxt">Our Staff</span>
+    
+        <!-- Burger Menu -->
+        <div class="burger-menu" onclick="toggleSidebar()">
+            <div class="bar topBar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <div class="goBack">
+        <button id="goBackBtn">Go Back</button>
+    </div>
+
+    <main class="chefs">
+        <h1 class="chefTittle">Our Crew</h1>
+
+    
+        <div class="chefs-container">
+            <div class="chef-container">
+                <div class="chef-card chef1"></div>
+                <div class="chef-info">
+                    <h2>Kenji Tanaka</h2>
+                    <p>A Japanese chef known for his innovative sushi techniques. Kenji blends traditional Edo-style sushi with modern molecular gastronomy.</p>
+                </div>
+            </div>
+        
+            <div class="chef-container">
+                <div class="chef-card chef2"></div>
+                <div class="chef-info">
+                    <h2>Lee Min-Joon</h2>
+                    <p>A Korean BBQ specialist, Min-Joon has revolutionized the way Korean cuisine is presented worldwide. His restaurants focus on premium cuts and authentic flavors.</p>
+                </div>
+            </div>
+        
+            <div class="chef-container">
+                <div class="chef-card chef3"></div>
+                <div class="chef-info">
+                    <h2>Arun Patel</h2>
+                    <p>An Indian chef famous for elevating street food into fine dining. His signature dishes include deconstructed samosas and modernized curries.</p>
+                </div>
+            </div>
+        
+            <div class="chef-container">
+                <div class="chef-card chef4"></div>
+                <div class="chef-info">
+                    <h2>Linh Nguyen</h2>
+                    <p>A Vietnamese chef and food stylist, Linh is known for her delicate pho recipes and artistic plating, bringing traditional flavors to a global audience.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="ourStory">
+        <div class="sepLine"></div>
+        <div class="story-card">
+            <h2>Our Story</h2>
+            <p>Flavor Haven was born from a dream—to bring the rich, diverse flavors of Asia to a global audience. What started as a small idea in the heart of Tokyo quickly turned into a culinary movement. From delicate sushi rolls to the bold spices of Thai curry, we strive to create an experience that takes our guests on a journey across Asia.</p>
+        </div>
+    
+        <div class="divider"></div> <!-- Visual separator -->
+    
+        <div class="founder-text">
+            <h2>Meet Our Founder</h2>
+            <p>Hiroshi Sakamoto, a self-taught chef with a deep love for Asian cuisine, spent over a decade traveling through Japan, Korea, Thailand, and Vietnam. Inspired by street food vendors, family kitchens, and high-end restaurants, he developed a philosophy: food is not just a meal—it’s an experience. In 2012, he took this vision and founded Flavor Haven, a place where tradition and innovation come together.</p>
+        </div>
+    
+        <div class="divider"></div>
+    
+        <div class="story-card">
+            <h2>Brief History</h2>
+            <p>Since our humble beginnings, we have grown into one of the most recognized Asian fusion restaurants in the region. Our chefs continue to push boundaries, creating dishes that blend authenticity with modern creativity. From hand-pulled noodles made fresh every day to our signature sushi rolls infused with unexpected flavors, we remain dedicated to quality, innovation, and passion.</p>
+        </div>
+    
+        <div class="divider"></div>
+    
+        <div class="story-card">
+            <h2>Upcoming Plans</h2>
+            <p>We believe food should evolve just as culture does. That’s why we’re always looking ahead. In the coming months, we’re launching a brand-new seasonal menu featuring rare and exotic ingredients sourced directly from Asia. Additionally, we are expanding to new locations to bring the **Flavor Haven experience** closer to you. Stay tuned for our upcoming tasting events, chef specials, and an exclusive behind-the-scenes look at our kitchen magic.</p>
+        </div>
+    </section>
+    
+
+
+    <footer class="infoCont">
+        <div class="footerTitle">
+            <h1>Contact Us!</h1>
+        </div>
+        
+        <div class="mailAndNumber">
+            <p><span class="boldFooter">Number:</span> 1-234-567-890</p>
+            <p><span class="boldFooter">Mail:</span> example@mail.com</p>
+        </div>
+        <div class="socials">
+            <p>our socials:</p>
+            <div class="logoCont">
+                <button class="logoButton"><i class=" logo-color fa-brands fa-instagram"></i></button>
+                <button class="logoButton"><i class=" logo-color fa-brands fa-facebook"></i></button>
+                <button class="logoButton"><i class=" logo-color fa-brands fa-linkedin"></i> </button>
+            </div>
+        </div>
+    </footer>
+    <script src="common.js"></script>
+</body>
+</html>

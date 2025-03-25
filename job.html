@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="job.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./ourStaff.html">About</a></li>
+            <li><a href="#" class="selectedSideBar">hirings</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <nav class="navbar">
+        <button class="rental-button" id="logoB">
+            <div class="logo"></div>
+        </button>
+        <button class="ourStaff" id="ourStaff">
+            <div class="logo2"></div>
+            <p class="hiddenTxt">our Staff</p>
+        </button>
+    
+        <span class="respTxt">Our Staff</span>
+    
+        <!-- Burger Menu -->
+        <div class="burger-menu" onclick="toggleSidebar()">
+            <div class="bar topBar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+
+    <div class="goBack">
+        <button id="goBackBtn">Go Back</button>
+    </div>
+
+    <section class="hiring-section">
+        <div class="hiring-text-container">
+            <div class="hiring-heading">
+                <h1>We're Hiring!</h1>
+            </div>
+            <p>We are looking for talented individuals to join our team! If you have a passion for excellence and want to work in an inspiring environment, we encourage you to apply today!</p>
+        </div>
+        <div class="hiring-form">
+            <h2>Apply Now</h2>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <p>upload resume below</p>
+                <input type="file" name="resume" required >
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    
+
+    <footer class="infoCont">
+        <div class="footerTitle">
+            <h1>Contact Us!</h1>
+        </div>
+        
+        <div class="mailAndNumber">
+            <p><span class="boldFooter">Number:</span> 1-234-567-890</p>
+            <p><span class="boldFooter">Mail:</span> example@mail.com</p>
+        </div>
+        <div class="socials">
+            <p>our socials:</p>
+            <div class="logoCont">
+                <button class="logoButton"><i class=" logo-color fa-brands fa-instagram"></i></button>
+                <button class="logoButton"><i class=" logo-color fa-brands fa-facebook"></i></button>
+                <button class="logoButton"><i class=" logo-color fa-brands fa-linkedin"></i> </button>
+            </div>
+        </div>
+    </footer>
+    <script src="common.js"></script>
+</body>
+</html>

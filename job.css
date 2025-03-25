@@ -1,0 +1,108 @@
+/* Main section */
+.hiring-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: lavender;
+    color: white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+/* Text container */
+.hiring-text-container {
+    flex: 1;
+    padding-right: 20px;
+    color: #260c4a;
+    max-width: 500px;
+}
+
+/* Separate Hiring Text */
+.hiring-heading {
+    font-size: 2.5rem;
+    margin-bottom: 10px; /* Reduced margin */
+    color: #4b0aa7; /* Blue-purple color */
+}
+
+/* Regular Text */
+.hiring-text-container p {
+    font-size: 1.4rem;
+    line-height: 1.4; /* Reduced line-height for tighter text */
+    margin-bottom: 20px; /* Added some space after paragraph */
+}
+
+/* Form section */
+.hiring-form {
+    flex: 1;
+    max-width: 400px; /* Limit form size */
+    background-color: #2f087d; /* Blue-purple background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hiring-form h2 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hiring-form input,
+.hiring-form button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.hiring-form input[type="text"],
+.hiring-form input[type="email"],
+.hiring-form input[type="tel"] {
+    background-color: #fff;
+    color: #333;
+}
+
+.hiring-form input[type="file"] {
+    background-color: #fff;
+    padding: 8px;
+}
+
+.hiring-form button {
+    background-color: #4b0aa7; /* Darker blue-purple */
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hiring-form button:hover {
+    background-color: #6006c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hiring-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hiring-form {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hiring-heading {
+        font-size: 2rem;
+    }
+
+    .hiring-text-container p {
+        font-size: 1rem;
+    }
+}

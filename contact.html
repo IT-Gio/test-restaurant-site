@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./ourStaff.html">About</a></li>
+            <li><a href="./job.html">hirings</a></li>
+            <li><a href="#" class="selectedSideBar">Contact</a></li>
+        </ul>
+    </div>
+    
+    <nav class="navbar">
+        <button class="rental-button" id="logoB">
+            <div class="logo"></div>
+        </button>
+        <button class="ourStaff" id="ourStaff">
+            <div class="logo2"></div>
+            <p class="hiddenTxt">our Staff</p>
+        </button>
+    
+        <span class="respTxt">Our Staff</span>
+    
+        <!-- Burger Menu -->
+        <div class="burger-menu" onclick="toggleSidebar()">
+            <div class="bar topBar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+
+    <div class="goBack">
+        <button id="goBackBtn">Go Back</button>
+    </div>
+
+
+    <main class="contact-page">
+        <section class="contact-info">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or inquiries, feel free to reach out to us. We’re happy to assist you!</p>
+            <div class="info-details">
+                <div class="info-item">
+                    <h2>Address</h2>
+                    <p>123 Restaurant St, Foodie City, Yummyland</p>
+                </div>
+                <div class="info-item">
+                    <h2>Phone</h2>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div class="info-item">
+                    <h2>Email</h2>
+                    <p>example@mail.com</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    
+
+
+    <footer class="infoCont">
+        <div class="footerTitle">
+            <h1>Contact Us!</h1>
+        </div>
+        
+        <div class="mailAndNumber">
+            <p><span class="boldFooter">Number:</span> 1-234-567-890</p>
+            <p><span class="boldFooter">Mail:</span> example@mail.com</p>
+        </div>
+        <div class="socials">
+            <p>our socials:</p>
+            <div class="logoCont">
+                <button class="logoButton"><i class=" logo-color fa-brands fa-instagram"></i></button>
+                <button class="logoButton"><i class=" logo-color fa-brands fa-facebook"></i></button>
+                <button class="logoButton"><i class=" logo-color fa-brands fa-linkedin"></i> </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="common.js"></script>
+</body>
+</html>

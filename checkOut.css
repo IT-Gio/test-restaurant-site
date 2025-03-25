@@ -1,0 +1,407 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 250px;
+  background: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+width: 100%;
+height: auto;
+border-radius: 8px;
+}
+
+.price-container {
+margin-top: auto; /* Pushes price to the bottom */
+text-align: center;
+font-weight: bold;
+}
+#checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  background-color: lavender;
+}
+.readCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  background-color: lavender;
+ 
+}
+.note, .boldFee{
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+.delivery{
+  font-size: 20px;
+  color: red; 
+  border-bottom: 1px solid rgb(175, 175, 175);
+  text-align: center;
+  padding-bottom: 20px;
+  width: 500px;
+}
+.cart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 250px;
+  background: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.price-container {
+  margin-top: auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.checkout-button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-button:hover {
+  background-color: #218838;
+}
+  
+
+/* Basic modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* On top of other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full screen */
+  height: 100%; /* Full screen */
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+  padding-top: 200px; /* Position the modal content 60px from the top */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Set the width of the modal */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.popup h2 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.popup p {
+  margin: 10px 0;
+}
+
+.popup button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+/* resp */
+/* Responsive adjustments */
+
+/* For screens smaller than 1024px (Tablets and below) */
+@media (max-width: 1024px) {
+  .readCont {
+    padding: 30px;
+  }
+
+  .note, .boldFee {
+    font-size: 20px;
+  }
+
+  .delivery {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  #checkout-container {
+    padding: 30px;
+  }
+
+  .cart-wrapper {
+    gap: 15px;
+  }
+
+  .product-card {
+    max-width: 200px; /* Reduce the width of the product cards */
+    padding: 12px;
+  }
+
+  .checkout-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* For screens smaller than 768px (Mobile devices) */
+@media (max-width: 768px) {
+  .readCont {
+    padding: 20px;
+  }
+
+  .note, .boldFee {
+    font-size: 18px;
+  }
+
+  .delivery {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  #checkout-container {
+    padding: 20px;
+  }
+
+  .cart-wrapper {
+    gap: 10px;
+  }
+
+  .product-card {
+    max-width: 180px; /* Make the product cards even smaller */
+    padding: 10px;
+  }
+
+  .checkout-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* For screens smaller than 425px (Very small devices like phones) */
+@media (max-width: 425px) {
+  .readCont {
+    padding: 15px;
+  }
+
+  .note, .boldFee {
+    font-size: 16px;
+  }
+
+  .delivery {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  #checkout-container {
+    padding: 15px;
+  }
+
+  .cart-wrapper {
+    gap: 8px;
+  }
+
+  .product-card {
+    max-width: 160px; /* Make the product cards even smaller */
+    padding: 8px;
+  }
+
+  .checkout-button {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
+/* modal resp */
+/* Responsive adjustments for Modal */
+
+/* For screens smaller than 1024px (Tablets and below) */
+@media (max-width: 1024px) {
+  .modal-content {
+    width: 60%; /* Decrease the width of the modal */
+    padding: 15px;
+  }
+
+  .modal h2 {
+    font-size: 24px; /* Adjust heading size */
+  }
+
+  label, input {
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  input[type="text"] {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .confirm-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+/* For screens smaller than 768px (Mobile devices) */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%; /* Make modal even smaller */
+    padding: 10px;
+  }
+
+  .modal h2 {
+    font-size: 22px; /* Smaller heading size */
+  }
+
+  label, input {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .confirm-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* For screens smaller than 425px (Very small devices) */
+@media (max-width: 425px) {
+  .modal-content {
+    width: 90%; /* Make modal width almost full for small screens */
+    padding: 8px;
+  }
+
+  .modal h2 {
+    font-size: 20px; /* Further reduce heading size */
+  }
+
+  label, input {
+    font-size: 12px; /* Smaller font for inputs */
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .confirm-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}

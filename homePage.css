@@ -1,0 +1,410 @@
+.toggleSidebarBtn {
+    position: absolute; /* Ensure it's positioned relative to .main */
+    top: 10px;
+    left: 20px;
+    padding: 0; /* Remove extra padding */
+    border-radius: 50%;
+    background-color: rgb(90, 24, 154);
+    color: lavender;
+    cursor: pointer;
+    transition: 0.3s ease;
+    z-index: 30;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the SVG */
+}
+
+/* Style the magnifier icon */
+.magnifier-icon {
+    width: 60%; /* Adjust size to fit inside */
+    height: 60%;
+    stroke: white; /* Make it visible */
+    stroke-width: 2.5; /* Keep it bold but not too thick */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Ensure .main has relative positioning */
+.main {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    background-color: lavender;
+    padding: 20px;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+/* Adjust the sidebar positioning */
+.asideCont {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out;
+    z-index: 10; /* Keep it below the toggle button */
+}
+
+/* Ensure aside is below the button */
+.asideCont.open {
+    transform: translateX(0);
+}
+
+.asideCont.closed {
+    transform: translateX(-100%);
+}
+
+
+/* Side button container */
+.sideButtonCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 80px;
+}
+
+/* Search and sort container */
+.searchSortAndCategory {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(142, 119, 255);
+    border: 4px solid rgb(43, 2, 87);
+    border-radius: 30px;
+    padding: 30px 20px;
+    min-width: 240px;
+}
+
+/* Input fields styling */
+#search,
+#searchByDish,
+#searchBy {
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(43, 2, 87);
+    background-color: rgb(178, 163, 255);
+    color: rgb(43, 2, 87);
+    font-family: "myFont";
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+#search:focus,
+#searchByDish:focus,
+#searchBy:focus {
+    padding: 15px;
+}
+
+#search::placeholder {
+    color: rgb(107, 62, 155);
+}
+
+#search:hover,
+#searchByDish:hover,
+#searchBy:hover {
+    padding: 15px;
+}
+
+/* Range input styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: rgb(60, 18, 94);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(90, 24, 154);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: rgb(90, 24, 154);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Range container */
+.range-container {
+    color: rgb(51, 12, 91);
+    font-size: 24px;
+    padding: 15px 0px;
+}
+
+/* Checkout styles */
+.checkOut {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    min-width: 260px;
+    background-color: rgb(142, 119, 255);
+    border: rgb(43, 2, 87) solid 4px;
+    border-radius: 30px;
+    min-width: 240px;
+    max-height: 190px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Custom scrollbar for Webkit browsers */
+.checkOut::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar */
+    margin-right: 10px; /* Push the scrollbar to the right */
+}
+
+.checkOut::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;
+}
+
+/* Cart container */
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 260px;
+    color: rgb(43, 2, 87);
+}
+
+.cart-container p {
+    padding: 10px;
+}
+
+/* See cart button */
+.seeCart {
+    background-color: rgb(90, 24, 154);
+    padding: 20px;
+    border: lavender 1px solid;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: lavender;
+    font-size: 20px;
+}
+
+.seeCart:hover {
+    padding: 25px;
+}
+
+/* Cart item styling */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.remove-btn {
+    margin-left: auto;
+    padding: 8px 12px;
+    background-color: rgb(43, 2, 87);
+    color: lavender;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 10px;
+}
+
+.remove-btn:hover {
+    background-color: rgb(90, 24, 154);
+    padding: 12px 16px;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Container for cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: lavender;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Card styling */
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 3px solid rgb(43, 2, 87);
+    border-radius: 30px;
+    min-width: 240px;
+    max-width: 300px;
+    height: 575px;
+    transition: 0.3s ease;
+    background-color: rgb(223, 211, 255);
+}
+
+/* Card description styling */
+.card-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
+
+/* Add to cart button */
+.add-cart-btn {
+    padding: 10px;
+    border: 2px solid lavender;
+    border-radius: 15px;
+    background-color: rgb(43, 2, 87);
+    color: lavender;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: auto;
+}
+
+.add-cart-btn:hover {
+    padding: 20px;
+}
+@media (max-width: 1030px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid */
+        gap: 15px;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .card {
+        min-width: 220px;
+        max-width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 425px) {
+    /* Adjust container to stack cards more efficiently */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Make cards more flexible for smaller screens */
+    .card {
+        min-width: 200px; /* Reduce minimum width */
+        max-width: 90%; /* Allow cards to scale based on screen width */
+        height: auto; /* Adjust height to prevent overflow */
+        padding: 15px;
+    }
+
+    /* Adjust card description for better readability */
+    .card-description {
+        font-size: 16px;
+    }
+
+    /* Make the add-to-cart button more accessible */
+    .add-cart-btn {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+/* Responsive font adjustments */
+@media (max-width: 768px) {
+    /* Reduce font size in the checkout section */
+    .checkOut {
+        font-size: 14px;
+    }
+    .range-container {
+        font-size: 16px ;
+    }
+    .cart-container{
+        gap: 0px;
+    }
+
+    .cart-container p {
+        font-size: 14px;
+    }
+
+    .cart-item {
+        font-size: 16px; /* Make the cart item text smaller */
+    }
+
+    .remove-btn {
+        font-size: 14px; /* Reduce font size for the remove button */
+    }
+
+    .seeCart {
+        font-size: 16px; /* Reduce font size of the checkout button */
+    }
+    .seeCart:hover{
+        padding: 20px;
+    }
+
+    .toggleSidebarBtn {
+        font-size: 18px; /* Adjust font size for the sidebar button */
+    }
+    .add-cart-btn:hover{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    /* Further reduce font size for mobile */
+    .checkOut {
+        font-size: 12px;
+    }
+
+    .cart-container p {
+        font-size: 12px;
+    }
+
+    .cart-item {
+        font-size: 14px; /* Even smaller cart item font size */
+    }
+
+    .remove-btn {
+        font-size: 12px; /* Reduce remove button font size */
+    }
+
+    .seeCart {
+        font-size: 14px; /* Reduce checkout button font size */
+    }
+
+    .toggleSidebarBtn {
+        font-size: 14px; /* Adjust font size of the sidebar button */
+    }
+
+    /* Reduce font size for card descriptions */
+    .card-description {
+        font-size: 14px;
+    }
+
+    /* Reduce card title font size */
+    .card .card-title {
+        font-size: 16px;
+    }
+}
+

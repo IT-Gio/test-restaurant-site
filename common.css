@@ -1,0 +1,319 @@
+/* fonts */
+@font-face {
+    font-family: "myFont";
+    src: url(./font/GrotleyRegular-mLEWv.otf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "myFont" !important;
+}
+
+.header{
+    background-color: rgb(240, 177, 251);
+    padding: 20px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rental-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logo{
+    width: 120px;
+    height: 80px;
+    background-image: url(./images/brandLogo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.rental-button:hover, .ourStaff:hover {
+    padding: 30px 30px;
+    background-color: white !important;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    background-color:rgb(90, 54, 248);
+    gap: 20px;
+}
+
+.burger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(-9px);
+    position: absolute;
+    top: 30px;
+}
+
+.respTxt{
+    display: none;
+    color: white;
+}
+
+.ourStaff{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logo2{
+    width: 170px;
+    height: 50px;
+    background-image: url(./images/ourStaff.png);
+    background-size: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 450px;
+    height: 100vh;
+    position: fixed;
+    right: -450px; /* Start hidden on the right */
+    top: 0;
+    background-color: #06001c;
+    transition: right 0.3s ease-in-out;
+    padding-top: 60px; /* Space for nav */
+    z-index: 40;
+}
+
+.sidebar.active {
+    right: 0; /* Show sidebar */
+}
+
+.burger-menu {
+    cursor: pointer;
+    position: fixed;
+    right: 20px; /* Positioned on the right */
+    top: 0px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.bar {
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+/* Animation when active */
+.burger-menu.active .bar:nth-child(1) {
+    transform: translateY(-22px) rotate(-45deg);
+}
+
+.burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(3) {
+    transform: translateY(22px) rotate(45deg);
+}
+
+
+
+.topBar{
+    margin-top: 23px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+
+.infoCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 40vh;
+    background-color:rgb(132, 104, 255);
+    color: lavender;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.mailAndNumber, .socials{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.logo-color{
+    color: lavender;
+    font-size: 30px;
+    transition: 0.4s ease;
+}
+
+.logo-color:hover{
+    font-size: 40px;
+}
+
+.logoButton{
+    background-color: rgb(132, 104, 255);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logoButton:hover{
+    padding: 5px;
+}
+
+.logoCont{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 30px;
+}
+
+.footerTitle{
+    font-size: 40px;
+    color: lavender;
+    padding-left: 30px;
+}
+
+.socials p{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.boldFooter{
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.goBack{
+    background-color: lavender;
+    padding: 20px;
+}
+
+#goBackBtn{
+    background-color: rgb(90, 54, 248);
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+}
+
+#goBackBtn:hover{
+    padding: 30px;
+}
+
+.selectedSideBar{
+    color:#707070 !important;
+}
+
+.hiddenTxt{
+    display: none;
+    color: rgb(38, 22, 109);
+}
+@media (max-width: 768px) {
+    /* Hide the image inside the ourStaff button */
+    .logo2 {
+        display: none;
+    }
+
+    /* Show the hidden text */
+    .hiddenTxt {
+        display: block;
+    }
+
+    /* Change the background image for logoB */
+    .logo {
+        background-image: url(./images/miniBrandLogo.png);
+        background-size: 100%;
+        width: 40px;
+        height: 35px;
+    }
+    .rental-button {
+        padding: 5px;
+    }
+    .sidebar {
+        width: 101vw; /* Full width */
+        right: -101vw; /* Start hidden */
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+    .infoCont {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+        padding: 30px;
+    }
+
+    .footerTitle h1 {
+        font-size: 24px; /* Smaller heading */
+    }
+
+    .mailAndNumber, 
+    .socials {
+        padding: 20px;
+    }
+
+    .socials p {
+        font-size: 22px;
+    }
+
+    .logoCont {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logoButton {
+        font-size: 24px;
+    }
+
+    .boldFooter {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+}

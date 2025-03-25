@@ -1,0 +1,106 @@
+/* Contact Page */
+.contact-page {
+    background-color: lavender;
+    padding: 40px;
+    border-radius: 10px;
+    color: #340360;
+    font-family: Arial, sans-serif;
+}
+
+/* Contact Information Section */
+.contact-info h1 {
+    font-size: 2.5rem;
+    color: #4b0aa7; /* Blue-purple color */
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.info-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    background-color: #2f087d; /* Blue-purple background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+}
+
+.info-item h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    color: #dcdcdc;
+    font-size: 1rem;
+}
+
+/* Contact Form Section */
+.contact-form {
+    background-color: #2f087d;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #21043a;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    background-color: #a872ff;
+    color: #2b085e;
+}
+.contact-form textarea::placeholder, .contact-form input[type="email"]::placeholder, .contact-form input[type="text"]::placeholder {
+    color: #2b085e;
+}
+
+.contact-form button {
+    background-color: #4b0aa7;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #6006c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-details {
+        flex-direction: column;
+    }
+
+    .info-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+}
